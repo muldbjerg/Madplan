@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Foodplan from './Foodplan.js';
 import Navigation from './Navigation.js';
 import app from './base.js';
+import './Home.css';
 
 let imgUrl = 'images/summer.jpg';
+
 
 Date.prototype.getWeekNumber = function(){
 var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
@@ -43,17 +45,32 @@ function logout(){
 
 
 
+
 class Home extends Component {
-  render() {
-    return (
-        <div className={"wrapper " + getTimeOffYear()}>
-            <div id="imageLeft" style={{ backgroundImage: imgUrl }}> </div>
-            <Foodplan weeknumber={new Date().getWeekNumber()}></Foodplan>
-            <Navigation></Navigation>
-            <button onClick={logout}>Log ud</button>
-        </div>
-    );
-  }
+
+    state = {
+        editable: 'Show'
+    };
+
+    changeEditState(state){
+        this.setState({
+            editable: state
+        });
+    }
+
+    render() {
+        return (
+            <div className={"wrapper " + getTimeOffYear()}>
+
+                <button onClick={() => this.changeEditState('Edit')}>Rediger madplan</button> 
+
+                <div id="imageLeft" style={{ backgroundImage: imgUrl }}> </div>
+                <Foodplan editState={this.state.editable} weeknumber={new Date().getWeekNumber()}></Foodplan>
+                <Navigation></Navigation>
+                <button id="logout" onClick={logout}>Log ud</button>
+            </div>
+        );
+    }
 }
 
 export default Home;
