@@ -1,0 +1,132 @@
+#navigation{
+    z-index: 99;
+    position: relative;
+    top: 85vh;
+}
+
+.arrow{
+    cursor: pointer;
+    
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
+  
+  .left.arrow{
+    float: right;
+    padding: 20px 0px 20px 15px;
+  }
+  
+  .right.arrow{
+    float: left;
+    padding: 20px 15px 20px 0px;
+  }
+  
+  .left.arrow:hover{
+    padding: 20px 15px 20px 15px;
+  }
+  
+  .right.arrow:hover{
+    padding: 20px 15px 20px 15px;
+  }
+  
+  svg polyline{
+    stroke: #81673F;
+    fill:none;
+    stroke-width: 3;
+  }
+  
+  .arrowLine{
+    fill:none;
+    position: relative;
+    stroke-width: 0;
+    stroke: #81673F;
+    left: 30px;
+  }
+  
+  .arrow:hover .arrowLine {
+      stroke-dasharray: 320;
+      stroke-dashoffset: 0;
+      stroke-width: 3;
+      animation: animateLine 1.8s linear;
+  }
+  
+    
+  @keyframes animateLine {
+    from {
+      stroke-dashoffset: 320;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  
+  /* COLOR PROFILES */
+  
+  .summer .arrow{
+    background: #FEECCE;
+  }
+  
+  .summer .arrow:hover{
+    background: #FCD18C;
+  }
+  
+  .summer svg polyline, .summer .arrowLine{
+    stroke: #81673F;
+  }
+  
+  .autumn .arrow{
+    background: #c9e6fb;
+  }
+  
+  .autumn .arrow:hover{
+    background: #89C9F7;
+  }
+  
+  .autumn svg polyline, .autumn .arrowLine{
+    stroke: #363E58;
+  }
+  
+  .winter .arrow{
+    background: #E5D2ED;
+  }
+  
+  .winter .arrow:hover{
+    background: #C9A1DA;
+  }
+  
+  .winter svg polyline, .winter .arrowLine{
+    stroke: #4C215E;
+  }
+  
+  .spring .arrow{
+    background: #D8F6D7;
+  }
+  
+  .spring .arrow:hover{
+    background: #94E791;
+  }
+  
+  .spring svg polyline, .spring .arrowLine{
+    stroke: #457C3A;
+  }
+  
+  
+  
+  /* BACKGROUND */
+  #leftside{
+    width: 49%;
+    float: left;
+    margin-right: 1%;
+    padding: 20px 0;
+  }
+  
+  #rightside{
+    width: 49%;
+    float: left;
+    margin-left: 1%;
+    padding: 20px 0;
+  }
+  

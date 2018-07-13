@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#imageLeft{
+    position: fixed;
+    width: 50%;
+    left: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    top: 0px;
+}
+
+.summer #imageLeft{
+    background-image:url('/images/summer.jpg');
+}
+
+.autumn #imageLeft{
+    background-image:url('/images/autumn.jpg');
+}
+
+.winter #imageLeft{
+    background-image:url('/images/winter.jpg');
+}
+
+.spring #imageLeft{
+    background-image:url('/images/spring.jpg');
+}

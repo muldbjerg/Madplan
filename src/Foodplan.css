@@ -1,0 +1,26 @@
+
+
+#foodplanArea h2{
+    position: fixed;
+    top:25%;
+    font-weight: 700;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+
+.summer #foodplanArea h2{
+    color: #F9A318;  
+}
+
+.autumn #foodplanArea h2{
+    color: #094A78;  
+}
+
+.winter #foodplanArea h2{
+    color: #4A2458;  
+}
+
+.spring #foodplanArea h2{
+    color: #2EC62B;  
+}
