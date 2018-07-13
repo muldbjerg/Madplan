@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Foodplan from './Foodplan.js';
 import Navigation from './Navigation.js';
-import './Foodplan.css';
+import app from './base.js';
 
 let imgUrl = 'images/summer.jpg';
 
@@ -30,6 +30,18 @@ function getTimeOffYear(){
     }
 } 
 
+function logout(){
+    console.log("Hallo");
+    app.auth().signOut()
+    .then(function() {
+        console.log("Logget ud");
+    })
+    .catch(function(error) {
+        console.log("Fejlet");
+    });
+}
+
+
 
 class Home extends Component {
   render() {
@@ -38,6 +50,7 @@ class Home extends Component {
             <div id="imageLeft" style={{ backgroundImage: imgUrl }}> </div>
             <Foodplan weeknumber={new Date().getWeekNumber()}></Foodplan>
             <Navigation></Navigation>
+            <button onClick={logout}>Log ud</button>
         </div>
     );
   }
